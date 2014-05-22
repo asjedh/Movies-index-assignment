@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title><%= @title %></title>
+  </head>
+
+  <body>
+
+    <form action='/movies' method='get'>
+      <label for='query'>Search: </label>
+      <input type="text" name="query" />
+
+      <input type="submit" value="Search"/>
+
+
+    </form>
+
+    <%= yield %>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<h1><%= @page %> All Movies</h1>
+
+<ol>
+<% @movies_on_this_page.each do |movie| %>
+  <li> <a href = '/movies/<%= movie[0] %>'> <%= movie[1][:title] %> </a> </li>
+<% end %>
+</ol>
+
+
+
+<ul class="pages_navigation">
+  <% @pages.each do |page| %>
+    <li><a href="/movies?page=<%= page %>"><%= page %></a> </li>
+  <% end %>
+</ul>
+
